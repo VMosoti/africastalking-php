@@ -5,7 +5,7 @@ Official AfricasTalking PHP API wrapper
 # How to Install
 
 ```bash
-composer require africastalking/africastalking
+composer require vmosoti/africastalking
 ```
 
 
@@ -15,7 +15,8 @@ composer require africastalking/africastalking
 
 ```php
 <?php
-require_once('AfricasTalkingGateway');
+use VMosoti\AfricasTalking\AfricasTalkingGateway;
+use VMosoti\AfricasTalking\AfricasTalkingGatewayException;
 
 // Specify your login credentials
 $username   = "MyAfricasTalkingUsername";
@@ -55,8 +56,9 @@ catch ( AfricasTalkingGatewayException $e )
 
 ```php
 <?php
-// Include the helper gateway class
-require_once('AfricasTalkingGateway');
+
+use VMosoti\AfricasTalking\AfricasTalkingGateway;
+use VMosoti\AfricasTalking\AfricasTalkingGatewayException;
 
 // Specify your login credentials
 $username   = "MyAfricasTalkingUsername";
@@ -105,8 +107,8 @@ catch ( AfricasTalkingGatewayException $e )
 
 ```php
 <?php
-// Be sure to include our gateway class
-require_once('AfricastalkingGateway');
+use VMosoti\AfricasTalking\AfricasTalkingGateway;
+use VMosoti\AfricasTalking\AfricasTalkingGatewayException;
 
 // Specify your login credentials
 $username   = "MyAfricasTalking_Username";
@@ -146,7 +148,8 @@ catch ( AfricasTalkingGatewayException $e )
 ```php
 <?php
 
-    require_once "AfricastalkingGateway";
+    use VMosoti\AfricasTalking\AfricasTalkingGateway;
+    use VMosoti\AfricasTalking\AfricasTalkingGatewayException;
     
     //Specify your credentials
     $username = "myAfricasTalkingUsername";
@@ -170,7 +173,7 @@ catch ( AfricasTalkingGatewayException $e )
      echo $result->discount;
      echo $result->requestId;
 
-     echo $esult->errorMessage;
+     echo $result->errorMessage;
     }
    }
    catch(AfricasTalkingGatewayException $e){
@@ -184,7 +187,9 @@ catch ( AfricasTalkingGatewayException $e )
 
 ```php
 <?php
-require_once('AfricastalkingGateway');
+
+use VMosoti\AfricasTalking\AfricasTalkingGateway;
+use VMosoti\AfricasTalking\AfricasTalkingGatewayException;
 
 $username   = "MyAfricasTalkingUsername";
 $apikey     = "MyAfricasTalkingApiKey";
